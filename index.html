@@ -9,34 +9,35 @@
 <body>
    <div class="container">
     <div class="score">
-        <p>You: <span>0</span></p>
-        <p>Comp: <span>0</span></p>
+        <p>You: <span id="user_score">0</span></p>
+        <p>Comp: <span id="comp_score">0</span></p>
     </div>
     <div class="game">
-        <div class="element" id="rock">
+        <div class="element" id="Rock">
             <img src="/photos/rock.jfif" alt="">
         </div>
-        <div class="element" id="paper">
+        <div class="element" id="Paper">
             <img src="/photos/paper.jfif" alt="">
         </div>
-        <div class="element" id="scissor">
+        <div class="element" id="Scissor">
            <img src="/photos/scissor.jfif" alt="">
         </div>
     </div>
     <div class="choice">
-      <p>Start with your first move.</p>
+      <p id="user">Start with your first move.</p>
+      <p id="comp"></p>
     </div>
     <div class="result">
-        <div class="win">
-            <p>winner</p>
+        <div class="win hidden">
+            
         </div>
         <div class="btns">
-            <button class="btn">Restart</button>
+            <button class="btn" id="restart">Restart</button>
             <button class="btn">Back</button>
         </div>
     </div>
    </div>
 
-   <script src="script.js"></script>
+   <script src="script.js" defer></script>
 </body>
 </html>

@@ -13,13 +13,11 @@ body{
     transform: translate(50%,22%);
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     border-radius: 10px;
 }
 
 .score{
-    /* background-color: blue; */
     width: 100%;
     height: 15%;
     display: flex;
@@ -68,7 +66,6 @@ body{
 }
 
 .result{
-    /* background-color: green; */
     width: 100%;
     height: 25%;
     display: flex;
@@ -78,23 +75,18 @@ body{
 
 .win{
     background-color: pink;
-    width: 55%;
+    width: 50%;
     height: 33%;
+    font-size: large;
+    font-weight: bold;
     color: red;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0.5rem;
-    display: none;
-    
-    p{
-        font-size: large;
-        font-weight: bold;
-    }
 }
 
 .btns{
-    /* background-color: red; */
     width: 100%;
     height: 55%;
     display: flex;
@@ -110,4 +102,8 @@ body{
     width: 20%;
     height: 50%;
     border-radius: 15px;
+}
+
+.hidden{
+    display: none;
 }
