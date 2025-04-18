@@ -107,3 +107,10 @@ body{
 .hidden{
     display: none;
 }
+
+.title{
+    font-size: xx-large;
+    font-weight: bold;
+    color: green;
+    margin: 1rem 0;
+}
