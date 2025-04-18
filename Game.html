@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container">
+    <div class="score">
+        <p id="user1_score"></p>
+        <p id="user2_score"></p>
+    </div>
+    <div class="title">
+        Welcome!
+    </div>
+    <div class="game">
+        <button class="element" id="Rock" onclick="handleClick('Rock')">
+            <img src="/photos/rock.jfif" alt="">
+        </button>
+        <div class="element" id="Paper" onclick="handleClick('Paper')">
+            <img src="/photos/paper.jfif" alt="">
+        </div>
+        <div class="element" id="Scissor" onclick="handleClick('Scissor')">
+           <img src="/photos/scissor.jfif" alt="">
+        </div>
+    </div>
+    <div class="choice">
+      <p id="user1_choice">Pick your weapon - Rock, Paper, or Scissors!</p>
+      <p id="user2_choice"></p>
+    </div>
+    <div class="result">
+        <div class="win hidden">
+            
+        </div>
+        <div class="btns">
+            <button class="btn" id="restart">Restart</button>
+            <button class="btn">Back</button>
+        </div>
+    </div>
+   </div>
+
+   <script src="script.js" defer></script>
+</body>
+</html>
