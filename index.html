@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <H1>HELOO ROCK PAPER SCISSOR</H1>
+   <div class="container">
+    <div class="score">
+        <p>You: <span>0</span></p>
+        <p>Comp: <span>0</span></p>
+    </div>
+    <div class="game">
+        <div class="element" id="rock">
+            <img src="/photos/rock2.jfif" alt="">
+        </div>
+        <div class="element" id="paper">
+            <img src="/photos/paper2.jfif" alt="">
+        </div>
+        <div class="element" id="scissor">
+           <img src="/photos/scissor2.jfif" alt="">
+        </div>
+    </div>
+    <div class="choice">
+      <p>Start with your first move.</p>
+    </div>
+    <div class="result">
+        <div class="win">
+            <p>winner</p>
+        </div>
+        <div class="btns">
+            <button class="btn">Restart</button>
+            <button class="btn">Back</button>
+        </div>
+    </div>
+   </div>
+
+   <script src="script.js"></script>
 </body>
 </html>

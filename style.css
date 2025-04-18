@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-color: orange;
+}
+.container{
+    background-color: whitesmoke;
+    width: 50vw;
+    height: 70vh;
+    transform: translate(50%,22%);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border-radius: 10px;
+}
+
+.score{
+    /* background-color: blue; */
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 7% ;
+}
+
+.game{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.element{
+    background-color:green;
+    width: 23%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+}
+
+.element:active{
+    transform: scale(0.9);
+    transition: 0.2s;
+}
+
+.choice{
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    padding: 0.7rem;
+    font-size: large;
+}
+
+.result{
+    /* background-color: green; */
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.win{
+    background-color: pink;
+    width: 55%;
+    height: 33%;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+    display: none;
+    
+    p{
+        font-size: large;
+        font-weight: bold;
+    }
+}
+
+.btns{
+    /* background-color: red; */
+    width: 100%;
+    height: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.btn{
+    background-color: green;
+    color: white;
+    border: none;
+    width: 20%;
+    height: 50%;
+    border-radius: 15px;
+}
