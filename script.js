@@ -1,7 +1,5 @@
-let mode = "";
-
-
-
+//when landing on the page, check if the page is index.html or Game.html
+//if index.html, add event listeners to the buttons
 document.addEventListener('DOMContentLoaded', () => {
     if(window.location.pathname.includes("index.html")){
         console.log("index.html loaded");
@@ -21,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(mode);
     }
 
+    //if Game.html, add event listeners to the elements
 else if(window.location.pathname.includes("Game.html")){
 
 let elements = document.querySelectorAll('.element');
@@ -36,9 +35,10 @@ let title = document.querySelector(".title");
 let result = "";
 let user1_score = 0;
 let user2_score = 0;
-let modes = localStorage.getItem('mode');
+let modes = localStorage.getItem('mode');//getting the mode from local storage
 console.log(modes);
 
+//function to display the winner and update the score
 function GamePlay(choice1,choice2,mode){
     if (mode =="OnePlayer"){
         user1 = "You";
@@ -67,13 +67,13 @@ function GamePlay(choice1,choice2,mode){
     return (result);
 }
 
-//handling the click event for each element
+//for one player mode
 if(modes == "OnePlayer"){
     u1_score.innerText = "You: 0";
     u2_score.innerText = "Comp: 0";
 elements.forEach((element) => {
     element.addEventListener('click', () => {
-        let user = element.getAttribute("id") //getting the id of the clicked element
+        let user = element.getAttribute("id"); //getting the id of the clicked element
         let comp = Math.floor(Math.random()*3); //generating random number between 0 and 2
 
         //assigning the random number to the corresponding string (Rock, Paper, Scissor)
@@ -94,7 +94,9 @@ elements.forEach((element) => {
 });
 }
 
-else{
+//for two player mode
+else
+{
     title.innerText = "Player1's turn!";
     u1_score.innerText = "Player1: 0";
     u2_score.innerText = "Player2: 0";
@@ -102,19 +104,21 @@ else{
    let clicks = 0;
    let Player1, Player2;
 
-    function handleClick(choice){
+   elements.forEach((element) => {
+    element.addEventListener('click', () => {
+        let choice = element.getAttribute("id");
         if(clicks<2){
-        if (turn == 1)
-        {
-            Player1 = choice;
-            turn = !turn;
-            console.log(turn);
-            console.log("Player1: " + Player1);
-            clicks++;
-            console.log(clicks);
-             title.innerText = "Player2's turn!"
-        }
-       else
+            if (turn == 1)
+            {
+                Player1 = choice;
+                turn = !turn;
+                console.log(turn);
+                console.log("Player1: " + Player1);
+                clicks++;
+                console.log(clicks);
+                 title.innerText = "Player2's turn!"
+            }
+            else
         {
             Player2 = choice;
             turn = !turn;
@@ -133,9 +137,10 @@ else{
         clicks=0
         
     } 
-}
+   });
+});
 
-    }
+}
     
 
 //for restarting the game
