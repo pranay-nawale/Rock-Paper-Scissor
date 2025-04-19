@@ -100,8 +100,23 @@ body{
     color: white;
     border: none;
     width: 20%;
-    height: 50%;
+    height: 70%;
     border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:active{
+    background-color: darkgreen;
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 0.2s;
+}
+a{
+    text-decoration: none;
+
 }
 
 .hidden{
@@ -141,9 +156,19 @@ body{
     text-align: center;
 }
 
-.btn{
+.start-btn{
     background-color: rgb(255, 0, 85);
     color: white;
     font-weight: bold;
     padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
 }
+
+.start-btn:active{
+    background-color:rgb(255, 0, 75);
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 0.2s;
+}
+
