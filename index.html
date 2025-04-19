@@ -5,12 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="container">
-        <h1>Welcome to Rock, Paper, Scissors! &#x270c; &#x1F44A; &#x1F91c;</h1>
-        <p></p>
+    <div class="container-fluid w-100">
+      <div class="heading pt-2 d-flex justify-content-center align-items-center flex-column" >
+        <h1>Welcome to Rock, Paper, Scissors!</h1> 
+        <h1>&#x270c; &#x1F44A; &#x1F91c;</h1>
+      </div>
+        
+        <p class="mx-5 my-3 fs-4">Welcome to the ultimate Rock, Paper, Scissors arena — where quick choices, sharp minds, and a bit of luck decide the winner. Whether you're battling a friend or challenging the computer, every move counts. Are you ready to make your choice?</p>
+
+        <div class="container">
+        <div class="card text-white" >
+          <div class="card-body">
+            <h4 class="card-title">Single Player</h4>
+            <p class="card-text m-3">Challlenge the computer and see who wins!</p>
+            <button class="btn" id="OnePlayer">Start Game</button>
+          </div>
+        </div>
+        <div class="card text-white" >
+          <div class="card-body">
+            <h4 class="card-title">Two Player</h4>
+            <p class="card-text m-3">Take turns and complete head-to-head!</p>
+            <button class="btn" id="TwoPlayer">Start Game</button>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

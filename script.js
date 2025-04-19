@@ -1,3 +1,28 @@
+let mode = "";
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    if(window.location.pathname.includes("index.html")){
+        console.log("index.html loaded");
+
+        let mode_1 = document.querySelector('#OnePlayer');
+        let mode_2 = document.querySelector('#TwoPlayer');
+        console.log(mode_1);
+        console.log(mode_2);
+        mode_1.addEventListener('click', () => {
+            localStorage.setItem('mode','OnePlayer')
+            window.location.href = "Game.html";
+        });
+        mode_2.addEventListener('click', () => {
+            localStorage.setItem('mode','TwoPlayer')
+            window.location.href = "Game.html";
+        });
+        console.log(mode);
+    }
+
+else if(window.location.pathname.includes("Game.html")){
+
 let elements = document.querySelectorAll('.element');
 let restart = document.querySelector('#restart');
 let user1_choice = document.querySelector('#user1_choice');
@@ -5,12 +30,14 @@ let user2_choice = document.querySelector('#user2_choice');
 let u1_score = document.querySelector('#user1_score');
 let u2_score = document.querySelector('#user2_score');
 let win = document.querySelector('.win');
-let title = document.querySelector(".title")
+let title = document.querySelector(".title");
+
 
 let result = "";
 let user1_score = 0;
 let user2_score = 0;
-let modes = "OnePlayer";
+let modes = localStorage.getItem('mode');
+console.log(modes);
 
 function GamePlay(choice1,choice2,mode){
     if (mode =="OnePlayer"){
@@ -115,11 +142,19 @@ else{
 restart.addEventListener('click', () => {
     user1_score = 0;
     user2_score = 0;
+    console.log(modes)
+    if(modes == "OnePlayer"){
+    u2_score.innerText = "Comp: 0";
+    u1_score.innerText = "You: 0"; 
+    }
+    else{
     u2_score.innerText = "Player2: 0";
     u1_score.innerText = "Player1: 0"; 
+    }
     win.classList.add('hidden');
     user1_choice.innerText = "Pick your weapon - Rock, Paper, or Scissors!";
     user2_choice.innerText = "";
 });
 
-
+    }
+});
