@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('mode','TwoPlayer')
             window.location.href = "Game.html";
         });
-        console.log(mode);
     }
 
     //if Game.html, add event listeners to the elements
