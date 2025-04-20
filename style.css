@@ -37,7 +37,6 @@ body{
 }
 
 .element{
-    background-color:green;
     width: 23%;
     border-radius: 50%;
     display: flex;
@@ -147,13 +146,13 @@ a{
 
 .card{
     width: 30%;
-    height: 80%;
+    /* height: 80%; */
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     background-color: darkcyan;
     border: none;
     text-align: center;
+    margin: 2rem;
 }
 
 .start-btn{
@@ -172,3 +171,63 @@ a{
     transition: 0.2s;
 }
 
+@media (max-width: 768px) {
+    .wrapper{
+        width: 90vw;
+        height: 80vh;
+        transform: translate(5%,10%);
+    }
+    .element{
+        width: 30%;
+    }
+    .btns{
+        padding: 0 5%;
+    }
+    .button{
+        width: 30%;
+    }
+    .card{
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper{
+        width: 90vw;
+        height: 90vh;
+        transform: translate(5%,5%);
+    }
+    .element{
+        width: 40%;
+    }
+    .btns{
+        padding: 0 2%;
+    }
+    .button{
+        width: 40%;
+    }
+    .card{
+        width: 90%;
+    }
+}
+
+@media (max-width: 780px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 80%;
+        margin: 1rem;
+    }
+}
+@media (max-width: 480px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 90%;
+        margin: 1rem;
+    }
+}
